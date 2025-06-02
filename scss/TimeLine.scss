@@ -1,0 +1,53 @@
+// ===== TIMELINE =====
+.timeline-page {
+  background-color: map-get($colors, background);
+  color: map-get($colors, text);
+  padding: 4rem 0;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 40px;
+  border-left: 4px solid map-get($colors, accent);
+}
+
+.time-stamp {
+  position: relative;
+  margin-bottom: 4rem;
+  padding-left: 20px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -49px;
+    top: 0.7rem;
+    transform: translateY(50%);
+    width: 14px;
+    height: 14px;
+    background-color: map-get($colors, accent);
+    border-radius: 50%;
+  }
+
+  .year {
+    font-weight: bold;
+    font-style: italic;
+    color: map-get($colors, accent);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  ul {
+    list-style-type: disc;
+    padding-left: 1rem;
+    background-color: transparent;
+    border: 2px solid map-get($colors, accent);
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 0;
+    color: map-get($colors, text);
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+}

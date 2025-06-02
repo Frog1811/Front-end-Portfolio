@@ -1,0 +1,80 @@
+// ===== VARIABLES =====
+$primary: #122E43;
+$accent: #00aaff;
+$background: #122E43;
+$text: #ffffff;
+$nav-footer: #0E2435;
+
+$colors: (
+        primary: $primary,
+        accent: $accent,
+        background: $background,
+        text: $text,
+        nav-footer: $nav-footer
+);
+
+$fonts: (
+        main: 'Arial, sans-serif'
+);
+
+$spacing: (
+        small: 8px,
+        medium: 16px,
+        large: 32px
+);
+
+$theme: dark;
+
+// ===== PLACEHOLDERS =====
+%button-styles {
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
+
+// ===== BASE STYLES =====
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: map-get($fonts, main);
+  background-color: map-get($colors, background);
+  color: map-get($colors, text);
+
+  @if $theme == light {
+    background: #fff;
+    color: #000;
+  } @else if $theme == dark {
+    background: map-get($colors, background);
+    color: map-get($colors, text);
+  } @else {
+    background: gray;
+    color: black;
+  }
+}
+
+main {
+  flex: 1;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// ===== IMPORTS =====
+@import "About";
+@import "Contact";
+@import "Footer";
+@import "HERO";
+@import "Navbar";
+@import "RESPONSIVE";
+@import "TimeLine";

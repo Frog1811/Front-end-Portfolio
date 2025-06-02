@@ -1,0 +1,19 @@
+// ===== RESPONSIVE =====
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+  }
+
+  .hero .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about .about-content {
+    flex-direction: column;
+  }
+
+  .timeline {
+    padding-left: 20px;
+  }
+}
